@@ -9,7 +9,7 @@ function filterFactory(regexp) {
   };
 }
 
-var numbers = filterFactory(/^[0-9,\.\-#]+(th|st|nd|rd)?$/);
+var numbers = filterFactory(/^[\w\W]*[0-9,\.\-#]+[\w\W]*$/);
 var acronyms = filterFactory(/^[A-Z0-9]{2,}(['\u2018-\u2019]s)?$/);
 
 exports.default = {
